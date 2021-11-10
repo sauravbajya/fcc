@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Landing Page</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+        <div class="logo"> 
+          <a href=".">
+          <img src="logo.svg" alt="logo"  id="header-img" class="img" />
+          <h1>Trombones</h1>
+        </a>
+        </div>
+     
+
+      <nav id="nav-bar" class="nav-bar">
+        <ul>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#video" class="nav-link">How It Works</a></li>
+          <li><a href="#card" class="nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+      </header>
+      
+      
+      <main id="features">
+        <div class="container">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="1.jpg" alt="premium material" style="width: 100%" />
+              <div class="text">Premium Materials</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="2.jpg" alt="fast shipping" style="width: 100%" />
+              <div class="text">Fast Shipping</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="3.jpg" alt="quality assurance" style="width: 100%" />
+              <div class="text">Quality Assurance</div>
+            </div>
+          </div>
+          <div style="display:none">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+        </div>
+
+
+        <div class="container" id="card">
+          <div class="card">
+            <img src="c.jpg" alt="TENOR TROMBONE" style="width: 100%" />
+            <h1>TENOR TROMBONE</h1>
+            <p class="price">$19.99</p>
+            <p class="des">
+              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            </p>
+            <p><button>Select</button></p>
+          </div>
+          <div class="card">
+            <img src="c.jpg" alt="BASS TROMBONE" style="width: 100%" />
+            <h1>BASS TROMBONE</h1>
+            <p class="price">$59.99</p>
+            <p class="des">
+              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            </p>
+            <p><button>Select</button></p>
+          </div>
+          <div class="card">
+            <img src="c.jpg" alt="VALVE TROMBONE" style="width: 100%" />
+            <h1>VALVE TROMBONE</h1>
+            <p class="price">$99.99</p>
+            <p class="des">
+              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            </p>
+            <p><button>Select</button></p>
+          </div>
+        </div>
+
+        <div class="container v">
+          <iframe id="video" class="video" src="https://www.youtube.com/embed/y8Yv4pnO7qc?autoplay=0&mute=1" frameborder="0" ></iframe>
+        </div>
+
+      </main>
+
+
+      <footer id="footer">
+        <div class="container">
+          <ul>
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam at earum necessitatibus voluptate minima dignissimos.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+          </ul>
+          <ul>
+            <h3>Location</h3>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem ipsum dolor sit.</p>
+          </ul>
+          <ul>
+            <h3>Subscribe</h3>
+            <p>Sign up if you want to stay upto date.</p>
+            <p>
+              <form action="https://www.freecodecamp.com/email-submit" id="form" method="POST">
+                <input type="email" id="email" placeholder="Enter Your Email" name="email"  class="form-control" required>
+                <input type="submit" id="submit">
+              </form>
+            </p>
+          </ul>
+        </div>
+      </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 7000); // Change image every 7 seconds
+      }
+      </script>
+  </body>
+</html>

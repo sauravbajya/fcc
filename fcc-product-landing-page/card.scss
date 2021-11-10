@@ -1,0 +1,44 @@
+@import 'breakpoint.scss';
+
+@media only screen and (min-width: $mobile-S), (min-width: $mobile-M), (min-width: $mobile-L){
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 45vmax;
+        margin: auto;
+        margin-top: 2vmax;
+        text-align: center;
+      }
+      h1{
+          font-size: 3vmax;
+      }
+      .price {
+        color: grey;
+        font-size: 2vmax;
+      }
+      .des{
+          text-align:center;
+          font-size: 1.5vmax;
+      }
+      
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 1vmax;
+        color: white;
+        background-color: $primary-color;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 2vmax;
+      }
+      
+      .card button:hover {
+        opacity: 0.7;
+      }
+}
+@media only screen and (min-width: $tablet), (min-width: $laptop), (min-width: $laptop-L){
+    .card{
+        max-width: 30vmax;
+        margin: auto;
+    }
+}

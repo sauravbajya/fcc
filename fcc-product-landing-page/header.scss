@@ -1,0 +1,90 @@
+@import 'breakpoint.scss';
+.header{
+    @media only screen and (min-width: $mobile-S), (min-width: $mobile-M), (min-width: $mobile-L){
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        .logo{
+            height: 50%;
+            a{
+                display: flex;
+                align-items: center;
+                color: $secondary-color;
+                .img{
+                    width: 10vmax;
+                }
+            } 
+        }
+        .nav-bar{
+            height: 50%;
+            width: 100%;
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                list-style: none;
+                li{
+                    width: 100%;
+                    a{
+                        font-size: 1.7vmax;
+                        width: 100%;
+                        padding: 2vmax;
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: $secondary-color;
+                        font-weight: 600;
+                        &:hover{
+                            color: $link-secondary;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    @media only screen and (min-width: $tablet), (min-width: $laptop), (min-width: $laptop-L){
+        flex-direction: row;
+        align-items: initial;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        .logo{
+            height: initial;
+            width: 50%;
+            a{
+                flex-direction: left;
+            } 
+        }
+        .nav-bar{
+            height:initial;
+            width: 50%;
+            ul{
+                height: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                list-style: none;
+                li{
+                    height: 100%;
+                    a{
+                        height: 100%;
+                        padding: 1vmax;
+                        align-items: center;
+                        text-decoration: none;
+                        color: $secondary-color;
+                        font-weight: 600;
+                        &:hover{
+                            color: $link-secondary;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}

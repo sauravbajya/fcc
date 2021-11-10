@@ -1,0 +1,49 @@
+@import 'variables.scss';
+@import 'header.scss';
+@import 'slideshow.scss';
+@import 'card.scss';
+@import 'video.scss';
+@import 'footer.scss';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+font-family:$font-stack;
+font-weight: 500;
+line-height: normal;
+background-color: $link-secondary;
+}
+a{
+    text-decoration: none;
+}
+main{
+    @media only screen and (min-width: $mobile-S), (min-width: $mobile-M), (min-width: $mobile-L){
+        background-color: $link-secondary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    @media only screen and (min-width: $tablet), (min-width: $laptop), (min-width: $laptop-L){
+        .container{
+            margin-top:6.5vmax;
+            display: initial;
+            flex-direction: initial;
+            justify-content: initial;
+        }
+        #card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+
